@@ -1,4 +1,4 @@
-#include <SDL.h>
+#include <pug.h>
 #include <pug/graphics/window.h>
 #include <pug/graphics/renderer.h>
 

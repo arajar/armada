@@ -9,22 +9,23 @@ const int game::SKIP_TICKS = 1000 / game::FPS;
 
 game::game()
 	: running_(true)
-	, gfx_ctx_(nullptr)
+	, gfx_context_(nullptr)
 {
 }
 
 game::~game()
 {
-	if (gfx_ctx_)
+	if (gfx_context_)
 	{
-		gfx_ctx_ = nullptr;
+		gfx_context_ = nullptr;
 	}
 }
 
 bool game::init(int argc, char* argv[])
 {
-	gfx_ctx_ = std::make_shared<gfx::context>();
-	gfx_ctx_->init("pug", 100, 100, 300, 300);
+	gfx_context_ = std::make_shared<gfx::context>();
+	gfx_context_->init(util::format("armada - {0}.{1}.{2}", version::major, version::minor, version::build)
+		, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 480);
 
 	return true;
 }
@@ -74,9 +75,9 @@ void game::update(uint32_t deltaTime)
 void game::render()
 {
 	// render the current gamestate
-	gfx_ctx_->renderer().clear(123, 11, 234);
+	gfx_context_->renderer().clear(64, 64, 64);
 
 	states::manager::get_instance()->render();
 
-	gfx_ctx_->renderer().present();
+	gfx_context_->renderer().present();
 }

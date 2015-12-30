@@ -8,8 +8,6 @@ namespace gfx
 		: ctx_(SDL_GL_CreateContext(*win))
 		, win_(win)
 	{
-		glewExperimental = GL_TRUE;
-		glewInit();
 	}
 
 	renderer::~renderer()

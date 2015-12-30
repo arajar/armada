@@ -41,5 +41,5 @@ private:
 	pug::util::timer fpsTimer_;
 
 private:
-	std::shared_ptr<gfx::context> gfx_ctx_;
+	std::shared_ptr<gfx::context> gfx_context_;
 };

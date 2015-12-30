@@ -1,5 +1,12 @@
 #pragma once
 
+struct version
+{
+	static int major;
+	static int minor;
+	static int build;
+};
+
 // Useful macros for development, will show a TODO message when compiling
 #define STRING2(x) #x
 #define STRING(x) STRING2(x)
@@ -13,4 +20,4 @@
 #include <ctime>
 #include <functional>
 
-//#include "loguru.hpp"
+#include <pug.h>

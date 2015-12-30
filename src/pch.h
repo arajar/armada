@@ -13,13 +13,4 @@
 #include <ctime>
 #include <functional>
 
-#include "sdl.h"
-
 //#include "loguru.hpp"
-
-#include "core/resources/contentManager.h"
-#include "core/resources/iresource.h"
-
-#include "core/util/timer.h"
-#include "core/util/tweener.h"
-#include "core/util/singleton.h"

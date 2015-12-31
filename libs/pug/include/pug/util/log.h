@@ -157,5 +157,5 @@ namespace util
 
 	static logger log;
 
-#define LOGI(x) util::log.info(x)
+#define LOGI(...) util::log.info(...)
 }
